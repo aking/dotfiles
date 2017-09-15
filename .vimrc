@@ -5,21 +5,10 @@ call pathogen#helptags() "call this when installing new plugins
 syntax on
 filetype plugin indent on
 
-set lispwords+=define
-set lispwords+=c-define
-set lispwords+=c-declare
-set lispwords+=c-lambda
-set lispwords+=string-append
-set lispwords+=symbol->string
-set iskeyword-=:
-
 let mapleader=","
-let g:is_gambit=1
 
 colorscheme ir_black
 set background=dark
-"colorscheme solarized
-set go-=L
 
 " vim static clojure
 let g:clojure_align_multiline_strings = 1
@@ -47,6 +36,7 @@ set guioptions-=l
 set guifont=Menlo:h13
 
 set expandtab
+set smarttab
 set shiftwidth=2
 set softtabstop=2
 
@@ -56,8 +46,8 @@ set incsearch
 set showmatch
 set hlsearch
 nnoremap <leader><space> :noh<cr>
-nnoremap <tab> %
-vnoremap <tab> %
+"nnoremap <tab> %
+"vnoremap <tab> %
 
 set virtualedit=
 
@@ -136,6 +126,8 @@ augroup filetype
   au! BufRead,BufNewFile *.proto setfiletype proto
   au BufRead,BufNewFile *.md set filetype=markdown
   au BufRead,BufNewFile *.mana set filetype=clojure
+  au BufRead,BufNewFile *.clj set filetype=clojure
+  au BufRead,BufNewFile *.cljs set filetype=clojure
 augroup end
 "au VimEnter * syntax keyword Statement lambda conceal cchar=λ
 "au VimEnter * hi! link Conceal Statement

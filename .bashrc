@@ -121,3 +121,4 @@ if ! shopt -oq posix; then
 fi
 
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
+export GIT_EDITOR="vim"
