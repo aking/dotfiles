@@ -23,6 +23,8 @@ set ruler
 set relativenumber
 set switchbuf=useopen,usetab
 set autowrite
+set laststatus=2
+set statusline=%t[%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
 "set autoindent smartindent
 "set backspace=indent,eol,start
 "set noerrorbells
@@ -125,7 +127,9 @@ augroup filetype
   au Syntax scm runtime! syntax/scheme.vim
   au! BufRead,BufNewFile *.proto setfiletype proto
   au BufRead,BufNewFile *.md set filetype=markdown
+  au BufRead,BufNewFile *.md.html set filetype=markdown
   au BufRead,BufNewFile *.mana set filetype=clojure
+  au BufRead,BufNewFile *.ava  set filetype=clojure
   au BufRead,BufNewFile *.clj set filetype=clojure
   au BufRead,BufNewFile *.cljs set filetype=clojure
 augroup end
