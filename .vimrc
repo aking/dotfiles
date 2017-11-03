@@ -42,12 +42,14 @@ set smarttab
 set shiftwidth=2
 set softtabstop=2
 
+set timeoutlen=200   " # of ms to wait on key command seq
 set ignorecase
 set smartcase
 set incsearch
 set showmatch
 set hlsearch
 nnoremap <leader><space> :noh<cr>
+imap kk <esc>
 "nnoremap <tab> %
 "vnoremap <tab> %
 
@@ -139,3 +141,11 @@ augroup end
 "au Syntax * syn keyword Operator lambda conceal cchar=λ
 "au Syntax * syn keyword Operator lambda conceal cchar=λ
 "au Syntax * syn keyword Operator define conceal cchar=∷
+
+if exists('$TMUX')
+    let &t_SI = "\<Esc>Ptmux;\<Esc>\e[5 q\<Esc>\\"
+    let &t_EI = "\<Esc>Ptmux;\<Esc>\e[2 q\<Esc>\\"
+else
+    let &t_SI = "\e[5 q"
+    let &t_EI = "\e[2 q"
+endif
