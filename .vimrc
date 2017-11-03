@@ -78,6 +78,9 @@ ino ,a <esc>
 cno ,a <c-c>
 " cno kj <c-c>
 "nmap ; :
+nmap <c-s> :w<CR>
+imap <c-s> <Esc>:w<CR>a
+
 nmap <leader>c :
 nmap <leader>l <C-W>l
 nmap <leader>h <C-W>h
