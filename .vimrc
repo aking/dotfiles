@@ -42,14 +42,15 @@ set smarttab
 set shiftwidth=2
 set softtabstop=2
 
-set timeoutlen=200   " # of ms to wait on key command seq
+set timeoutlen=500   " # of ms to wait on key command seq
 set ignorecase
 set smartcase
 set incsearch
 set showmatch
 set hlsearch
 nnoremap <leader><space> :noh<cr>
-imap kk <esc>
+imap kk <Esc>
+imap kj <Esc>
 "nnoremap <tab> %
 "vnoremap <tab> %
 

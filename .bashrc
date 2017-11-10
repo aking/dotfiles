@@ -122,3 +122,8 @@ fi
 
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 export GIT_EDITOR="vim"
+
+# disable CTRL-S stopping the console!
+bind -r '\C-s'
+stty -ixon
+
