@@ -80,7 +80,7 @@ cno ,a <c-c>
 " cno kj <c-c>
 "nmap ; :
 nmap <c-s> :w<CR>
-imap <c-s> <Esc>:w<CR>a
+imap <c-s> <Esc>:w
 
 nmap <leader>c :
 nmap <leader>l <C-W>l
