@@ -4,6 +4,7 @@
 --exclude=.git
 --exclude=.svn
 --exclude=resources/*
+--exclude=node_modules/*
 --exclude=*/resources/*
 --exclude=*/public/*
 --exclude=.repl/*
