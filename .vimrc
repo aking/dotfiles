@@ -60,6 +60,9 @@ set virtualedit=
 " "set listchars=tab:>-,trail:·,eol:$
 nmap <silent> <leader>s :set nolist!<CR>
 
+" Close current buffer, but not the split/window
+nmap <leader>d :b#<bar>bd#<CR>
+
 " Quieten prompts
 set shortmess=atI
 
@@ -81,6 +84,8 @@ cno ,a <c-c>
 "nmap ; :
 nmap <c-s> :w<CR>
 imap <c-s> <Esc>:w
+nmap <leader>s :w<CR>
+imap <leader>s <Esc>:w
 
 nmap <leader>c :
 nmap <leader>l <C-W>l
@@ -89,6 +94,7 @@ nmap <leader>k <C-W>k
 nmap <leader>j <C-W>j
 
 map <silent> <leader><Enter> ,ms<cr>
+" map <silent> <leader>, ,ms<cr>
 
 nnoremap <silent> <C-Right> <c-w>l
 nnoremap <silent> <C-Left> <c-w>h
@@ -106,14 +112,14 @@ vnoremap <C-e> 2j2<C-e>
 vnoremap <C-y> 2k2<C-y>
 
 " Training wheels - disable arrowkeys!
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
+"nnoremap <up> <nop>
+"nnoremap <down> <nop>
+"nnoremap <left> <nop>
+"nnoremap <right> <nop>
+"inoremap <up> <nop>
+"inoremap <down> <nop>
+"inoremap <left> <nop>
+"inoremap <right> <nop>
 " nnoremap j gj
 " nnoremap k gk
 
@@ -136,8 +142,10 @@ augroup filetype
   au BufRead,BufNewFile *.md.html set filetype=markdown
   au BufRead,BufNewFile *.mana set filetype=clojure
   au BufRead,BufNewFile *.ava  set filetype=clojure
+  au BufRead,BufNewFile *.v  set filetype=clojure
   au BufRead,BufNewFile *.clj set filetype=clojure
   au BufRead,BufNewFile *.cljs set filetype=clojure
+  au BufRead,BufNewFile *.cljx set filetype=clojure
 augroup end
 "au VimEnter * syntax keyword Statement lambda conceal cchar=λ
 "au VimEnter * hi! link Conceal Statement
