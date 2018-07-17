@@ -63,6 +63,9 @@ nmap <silent> <leader>s :set nolist!<CR>
 " Close current buffer, but not the split/window
 nmap <leader>d :b#<bar>bd#<CR>
 
+" Move to next window
+nmap <leader>w <c-w><c-w>
+
 " Quieten prompts
 set shortmess=atI
 

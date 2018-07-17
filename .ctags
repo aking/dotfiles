@@ -24,8 +24,6 @@
 --regex-clojure=/\([ \t]*defmulti[ \t]+([-[:alnum:]*+!_><:\/.?]+)/\1/a,multimethod definition/
 --regex-clojure=/\([ \t]*defmethod[ \t]+([-[:alnum:]*+!_><:\/.?]+)/\1/b,multimethod instance/
 --regex-clojure=/\([ \t]*defonce[ \t]+([-[:alnum:]*+!_><:\/.?]+)/\1/c,definition (once)/
---regex-clojure=/\([ \t]*defstruct[ \t]+([-[:alnum:]*+!_><:\/.?]+)/\1/s,struct/
---regex-clojure=/\([ \t]*defprotocol[ \t]+([-[:alnum:]*+!_><:\/.?]+)/\1/s
 --regex-clojure=/\([ \t]*intern[ \t]+([-[:alnum:]*+!_><:\/.?]+)/\1/v,intern/
 --regex-clojure=/\([ \t]*ns[ \t]+([-[:alnum:]*+!_><:\/.?]+)/\1/n,namespace/
 
