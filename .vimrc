@@ -76,6 +76,12 @@ set directory=~/.vim-tmp,~/tmp,/var/tmp,/tmp
 set nowrap
 set formatoptions=qrn1
 
+" DATE
+imap <leader>d <c-r>=strftime("%Y%m%d")<cr>
+nmap <leader>d i<c-r>=strftime("%Y%m%d")<cr><Esc>
+"nmap <leader>D i<c-r>=strftime("%Y-%m-%d %H:%M")<cr><Esc>
+nmap <leader>D i<c-r>=strftime("%FT%T%z")<cr><Esc>
+
 " Tmuxify...
 let g:tmuxify_pane_split = '-v'
 
