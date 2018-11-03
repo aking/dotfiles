@@ -63,8 +63,15 @@ nmap <silent> <leader>s :set nolist!<CR>
 " Close current buffer, but not the split/window
 nmap <leader>d :b#<bar>bd#<CR>
 
+" Activate clojure ns
+" Marks current spot, moves to top of 
+" file, selects about form, sends it 
+" to the repl pane, then moves back
+" to original spot
+nmap <leader>n mtggvab,<CR>'t
+
 " Move to next window
-nmap <leader>w <c-w><c-w>
+" nmap <leader>w <c-w><c-w>
 
 " Quieten prompts
 set shortmess=atI
@@ -84,6 +91,7 @@ nmap <leader>T i<c-r>=strftime("%FT%T%z")<cr><Esc>
 
 " Tmuxify...
 let g:tmuxify_pane_split = '-v'
+let g:tmuxify_global_maps = 1
 
 nno ,a <esc>
 ino ,a <esc>
@@ -155,6 +163,7 @@ augroup filetype
   au BufRead,BufNewFile *.clj set filetype=clojure
   au BufRead,BufNewFile *.cljs set filetype=clojure
   au BufRead,BufNewFile *.cljx set filetype=clojure
+  au BufRead,BufNewFile *cljs call PareditInitBuffer()
 augroup end
 "au VimEnter * syntax keyword Statement lambda conceal cchar=λ
 "au VimEnter * hi! link Conceal Statement
