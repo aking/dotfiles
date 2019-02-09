@@ -120,7 +120,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-PATH="$HOME/bin:$HOME/.local/bin:$PATH"
+PATH="/home/linuxbrew/.linuxbrew/bin:$HOME/bin:$HOME/.local/bin:$PATH"
 export GIT_EDITOR="vim"
 
 # disable CTRL-S stopping the console!

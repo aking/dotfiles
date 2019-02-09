@@ -93,16 +93,21 @@ nmap <leader>T i<c-r>=strftime("%FT%T%z")<cr><Esc>
 let g:tmuxify_pane_split = '-v'
 let g:tmuxify_global_maps = 1
 
-nno ,a <esc>
-ino ,a <esc>
+nno ,x <esc>
+ino ,x <esc>
 " ino kj <esc>
-cno ,a <c-c>
+cno ,x <c-c>
 " cno kj <c-c>
 "nmap ; :
 nmap <c-s> :w<CR>
 imap <c-s> <Esc>:w
 nmap <leader>s :w<CR>
 imap <leader>s <Esc>:w
+
+map <leader>a :A<CR>
+" map <leader>av :AV<CR>
+" map <leader>an :IHN<CR>
+
 
 nmap <leader>c :
 nmap <leader>l <C-W>l
@@ -159,6 +164,7 @@ augroup filetype
   au BufRead,BufNewFile *.md.html set filetype=markdown
   au BufRead,BufNewFile *.mana set filetype=clojure
   au BufRead,BufNewFile *.ava  set filetype=clojure
+  au BufRead,BufNewFile *.mu  set filetype=clojure
   au BufRead,BufNewFile *.v  set filetype=clojure
   au BufRead,BufNewFile *.clj set filetype=clojure
   au BufRead,BufNewFile *.cljs set filetype=clojure
