@@ -152,6 +152,7 @@ nmap <c-x><c-h> :b4<cr>
 nmap <c-x><c-j> :b5<cr>
 nmap <c-x><c-k> :b6<cr>
 nmap <c-x><c-m> :make -j6<cr>
+imap <c-x><c-m> <Esc>:w<cr>:make -j6<cr>
 nmap <c-x><c-x> mzv(((((<c-c><c-c>`z
 " nmap <c-x><c-b> :update<bar>make -j4<cr>
 nmap <c-x><c-x> mzv(((((<c-c><c-c>`z
