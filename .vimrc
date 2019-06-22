@@ -50,11 +50,12 @@ set showmatch
 set hlsearch
 nnoremap <leader><space> :noh<cr>
 imap kk <Esc>
+imap jj <Esc>
 imap kj <Esc>
 "nnoremap <tab> %
 "vnoremap <tab> %
 
-set virtualedit=
+" set virtualedit=
 
 " Make whitespace visibility toggleable
 " "set listchars=tab:>-,trail:·,eol:$
@@ -160,6 +161,9 @@ imap <c-x><c-x> <Esc>:wall<cr>:make -j4<cr>:!src/mu<cr>
 " nmap <c-x><c-b> :update<bar>make -j4<cr>
 " nmap <c-x><c-x> mzv(((((<c-c><c-c>`z
 " nmap <c-x><c-b> :update<bar>make -j4<cr>
+
+" Delete trailing whitespace
+autocmd FileType clojure autocmd BufWritePre <buffer> %s/\s\+$//e
 
 augroup filetype
   au Syntax scm runtime! syntax/scheme.vim
