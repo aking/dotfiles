@@ -101,9 +101,9 @@ cno ,x <c-c>
 " cno kj <c-c>
 "nmap ; :
 nmap <c-s> :w<CR>
-imap <c-s> <Esc>:w
+imap <c-s> <Esc>:w<CR>i
 nmap <leader>s :w<CR>
-imap <leader>s <Esc>:w
+imap <leader>s <Esc>:w<CR>i
 
 map <leader>a :A<CR>
 " map <leader>av :AV<CR>
@@ -157,6 +157,8 @@ imap <c-x><c-m> <Esc>:w<cr>:make -j6<cr>
 nmap <c-x><c-r> :!src/mu<cr>
 nmap <c-x><c-x> :wall<cr>:make -j4<cr>:!src/mu<cr>
 imap <c-x><c-x> <Esc>:wall<cr>:make -j4<cr>:!src/mu<cr>
+nmap <c-x><c-s> :wall<cr>
+imap <c-x><c-s> <Esc>:wall<cr>i
 " nmap <c-x><c-x> mzv(((((<c-c><c-c>`z
 " nmap <c-x><c-b> :update<bar>make -j4<cr>
 " nmap <c-x><c-x> mzv(((((<c-c><c-c>`z
