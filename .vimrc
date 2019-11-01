@@ -102,13 +102,14 @@ cno ,x <c-c>
 "nmap ; :
 nmap <c-s> :w<CR>
 imap <c-s> <Esc>:w<CR>i
-nmap <leader>s :w<CR>
 imap <leader>s <Esc>:w<CR>i
+imap <leader>S <Esc>:wa<CR>i
+nmap <leader>s :w<CR>
+nmap <leader>S :wa<CR>
 
 map <leader>a :A<CR>
 " map <leader>av :AV<CR>
 " map <leader>an :IHN<CR>
-
 
 nmap <leader>c :
 nmap <leader>l <C-W>l
