@@ -7,7 +7,8 @@ filetype plugin indent on
 
 let mapleader=","
 
-colorscheme ir_black
+" colorscheme ir_black
+colorscheme defnoche
 set background=dark
 
 " vim static clojure
@@ -55,7 +56,7 @@ imap kj <Esc>
 "nnoremap <tab> %
 "vnoremap <tab> %
 
-" set virtualedit=
+set virtualedit=
 
 " Make whitespace visibility toggleable
 " "set listchars=tab:>-,trail:·,eol:$
