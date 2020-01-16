@@ -156,9 +156,9 @@ nmap <c-x><c-j> :b5<cr>
 nmap <c-x><c-k> :b6<cr>
 nmap <c-x><c-m> :make -j6<cr>
 imap <c-x><c-m> <Esc>:w<cr>:make -j6<cr>
-nmap <c-x><c-r> :!src/mu<cr>
-nmap <c-x><c-x> :wall<cr>:make -j4<cr>:!src/mu<cr>
-imap <c-x><c-x> <Esc>:wall<cr>:make -j4<cr>:!src/mu<cr>
+nmap <c-x><c-r> :!src/x3x<cr>
+nmap <c-x><c-x> :wall<cr>:make -j4<cr>:!src/x3x<cr>
+imap <c-x><c-x> <Esc>:wall<cr>:make -j4<cr>:!src/x3x<cr>
 nmap <c-x><c-s> :wall<cr>
 imap <c-x><c-s> <Esc>:wall<cr>i
 " nmap <c-x><c-x> mzv(((((<c-c><c-c>`z
@@ -181,7 +181,7 @@ augroup filetype
   au BufRead,BufNewFile *.clj set filetype=clojure
   au BufRead,BufNewFile *.cljs set filetype=clojure
   au BufRead,BufNewFile *.cljx set filetype=clojure
-  au BufRead,BufNewFile *cljs call PareditInitBuffer()
+  " au BufRead,BufNewFile *cljs call PareditInitBuffer()
 augroup end
 "au VimEnter * syntax keyword Statement lambda conceal cchar=λ
 "au VimEnter * hi! link Conceal Statement
