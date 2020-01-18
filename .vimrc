@@ -154,11 +154,16 @@ nmap <c-x><c-g> :b3<cr>
 nmap <c-x><c-h> :b4<cr>
 nmap <c-x><c-j> :b5<cr>
 nmap <c-x><c-k> :b6<cr>
-nmap <c-x><c-m> :make -j6<cr>
-imap <c-x><c-m> <Esc>:w<cr>:make -j6<cr>
-nmap <c-x><c-r> :!src/x3x<cr>
-nmap <c-x><c-x> :wall<cr>:make -j4<cr>:!src/x3x<cr>
-imap <c-x><c-x> <Esc>:wall<cr>:make -j4<cr>:!src/x3x<cr>
+" nmap <c-x><c-m> :make -j6<cr>
+" imap <c-x><c-m> <Esc>:w<cr>:make -j6<cr>
+" nmap <c-x><c-r> :!src/x3x<cr>
+" nmap <c-x><c-x> :wall<cr>:make -j4<cr>:!src/x3x<cr>
+" imap <c-x><c-x> <Esc>:wall<cr>:make -j4<cr>:!src/x3x<cr>
+nmap <c-x><c-m> :!./fips build<cr>
+imap <c-x><c-m> <Esc>:w<cr>:!./fips build<cr>
+nmap <c-x><c-r> :!./fips run x3x-sapp<cr>
+nmap <c-x><c-x> :wall<cr>:!./fips build<cr>:!./fips run x3x-sapp<cr>
+imap <c-x><c-x> <Esc>:wall<cr>:!./fips build<cr>:!./fips run x3x-sapp<cr>
 nmap <c-x><c-s> :wall<cr>
 imap <c-x><c-s> <Esc>:wall<cr>i
 " nmap <c-x><c-x> mzv(((((<c-c><c-c>`z
