@@ -174,6 +174,8 @@ imap <c-x><c-s> <Esc>:wall<cr>i
 " Delete trailing whitespace
 autocmd FileType clojure autocmd BufWritePre <buffer> %s/\s\+$//e
 
+autocmd FileType c setlocal commentstring=//%s
+
 augroup filetype
   au Syntax scm runtime! syntax/scheme.vim
   au! BufRead,BufNewFile *.proto setfiletype proto
