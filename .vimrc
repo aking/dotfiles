@@ -59,8 +59,8 @@ imap kj <Esc>
 set virtualedit=
 
 " Make whitespace visibility toggleable
-" "set listchars=tab:>-,trail:·,eol:$
-nmap <silent> <leader>s :set nolist!<CR>
+set listchars=tab:>-,trail:·,eol:$
+nmap <silent> <leader>v :set nolist!<CR>
 
 " Close current buffer, but not the split/window
 nmap <leader>d :b#<bar>bd#<CR>
