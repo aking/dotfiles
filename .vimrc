@@ -26,6 +26,7 @@ set switchbuf=useopen,usetab
 set autowrite
 set laststatus=2
 set statusline=%t[%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
+set nofoldenable
 "set autoindent smartindent
 "set backspace=indent,eol,start
 "set noerrorbells
@@ -103,6 +104,8 @@ cno ,x <c-c>
 "nmap ; :
 nmap <c-s> :w<CR>
 imap <c-s> <Esc>:w<CR>i
+nmap <c-s-s> :wall<CR>
+imap <c-s-s> <Esc>:wall<CR>i
 imap <leader>s <Esc>:w<CR>i
 imap <leader>S <Esc>:wa<CR>i
 nmap <leader>s :w<CR>
