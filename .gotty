@@ -1,0 +1,12 @@
+port = "9000"
+
+// Allow input from browser
+permit_write = true
+
+enable_tls = false
+
+preferences {
+  font_size = 10
+  font_smoothing = "antialiased"
+  background_color = "rgb(8, 8, 16)"
+}

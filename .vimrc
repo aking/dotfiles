@@ -94,7 +94,6 @@ nmap <leader>T i<c-r>=strftime("%FT%T%z")<cr><Esc>
 
 " Tmuxify...
 let g:tmuxify_pane_split = '-v'
-let g:tmuxify_global_maps = 1
 
 nno ,x <esc>
 ino ,x <esc>
