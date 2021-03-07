@@ -122,7 +122,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-PATH="/usr/local/Gambit/bin:/home/linuxbrew/.linuxbrew/bin:$HOME/bin:$HOME/.local/bin:$PATH"
+PATH="/usr/local/Gambit/bin:/home/linuxbrew/.linuxbrew/bin:$HOME/bin:$HOME/.local/bin:/usr/local/opt/openjdk@11/bin:$PATH"
 export GIT_EDITOR="vim"
 
 # disable CTRL-S stopping the console!

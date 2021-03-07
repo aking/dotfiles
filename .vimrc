@@ -7,8 +7,8 @@ filetype plugin indent on
 
 let mapleader=","
 
-" colorscheme ir_black
-colorscheme defnoche
+colorscheme ir_black
+" colorscheme defnoche
 set background=dark
 
 " vim static clojure
@@ -54,9 +54,9 @@ set incsearch
 set showmatch
 set hlsearch
 nnoremap <leader><space> :noh<cr>
-imap kk <Esc>
+" imap kk <Esc>
 imap jj <Esc>
-imap kj <Esc>
+imap jk <Esc>
 "nnoremap <tab> %
 "vnoremap <tab> %
 
@@ -106,6 +106,8 @@ cno ,x <c-c>
 "nmap ; :
 nmap <c-s> :w<CR>
 imap <c-s> <Esc>:w<CR>i
+nmap <A-s> :w<CR>
+imap <M-s> <Esc>:w<CR>i
 nmap <c-s-s> :wall<CR>
 imap <c-s-s> <Esc>:wall<CR>i
 imap <leader>s <Esc>:w<CR>i
@@ -194,6 +196,7 @@ augroup filetype
   au BufRead,BufNewFile *.cljs set filetype=clojure
   au BufRead,BufNewFile *.cljx set filetype=clojure
   au BufRead,BufNewFile *.xx set filetype=clojure
+  au BufRead,BufNewFile *.vs,*.fs set filetype=glsl
   " au BufRead,BufNewFile *cljs call PareditInitBuffer()
 augroup end
 "au VimEnter * syntax keyword Statement lambda conceal cchar=λ
