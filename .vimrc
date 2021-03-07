@@ -15,6 +15,9 @@ set background=dark
 let g:clojure_align_multiline_strings = 1
 let g:clojure_align_subforms = 1
 
+" Allow us to use Ctrl-s and Ctrl-q as keybinds
+silent !stty -ixon
+
 set concealcursor=nvci
 set hidden
 set modelines=1
