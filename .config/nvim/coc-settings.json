@@ -1,0 +1,23 @@
+{
+  "languageserver": {
+    "clojure-lsp": {
+      "command": "clojure-lsp",
+      "filetypes": ["clojure"],
+      "disableDiagnostics": false,
+      "rootPatterns": ["shadow-cljs.edn", "deps.edn", "project.clj"],
+      "additionalSchemes": ["jar", "zipfile"],
+      "trace.server": "verbose",
+      "initializationOptions": {
+        "project-specs": [{
+          "project-path": "deps.edn",
+          "classpath-cmd": ["clj", "-Spath"]
+        }],
+        "use-metadata-for-privacy?": true,
+        "ignore-classpath-directories": true
+      }
+    }
+  },
+  "clangd.path": "/Users/kinga/.config/coc/extensions/coc-clangd-data/install/12.0.1/clangd_12.0.1/bin/clangd",
+  "clangd.checkUpdates": true,
+  "clangd.semanticHighlighting": true
+}
